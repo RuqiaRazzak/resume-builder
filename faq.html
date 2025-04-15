@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs</title>
+  <link rel="shortcut icon" href="./images/images.jpeg" type="image/x-icon">
+  <link rel="icon" href="images/RB_Logo.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css/faq.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+	<div class="container">
+	  <a href="index.html" class="logo">
+		<img src="./images/RB.svg" alt="Logo">
+	  </a>
+	  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</button>
+	  <div class="nav-links" id="navLinks">
+		<ul>
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="Form.html">Create Resume</a></li>
+		  <li><a href="#templates">Resume Templates</a></li>
+		  <li><a href="faq.html">FAQ</a></li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>CV (Curriculum Vitae)</h1>
+    <p>Information, Frequently Asked Questions, and Tips on Your CV.</p>
+  </header>
+
+  <!-- FAQ Cards -->
+  <section class="faq-container">
+    <div class="faq-card">
+      <h3>What is a CV?</h3>
+      <p>CV is an abbreviation of the Latin words 'curriculum vitae', which mean 'life course'. A professional CV provides a summary and a good overview of someone's life.</p>
+      <p>Your CV includes your education(s), qualifications, work experience, skills, and qualities, giving potential employers a quick snapshot of your profile.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>What should I include in my curriculum vitae?</h3>
+      <p>Your CV should only contain information relevant to your potential employer. It must include:</p>
+      <ul>
+        <li>Personal and contact details</li>
+        <li>Education and qualifications</li>
+        <li>Work experience</li>
+        <li>Skills and interests</li>
+      </ul>
+    </div>
+
+    <div class="faq-card">
+      <h3>What is a chronological CV?</h3>
+      <p>The chronological CV lists time-based entries (like jobs and studies) in reverse order — your latest experience first.</p>
+      <p>The general order: contact info → personal summary → education → work experience → skills → languages → interests.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>How to make your own CV?</h3>
+      <p>You can use Word or free online resume tools. Or use our Resume Builder for a downloadable version in just 15 minutes.</p>
+      <p>Once complete, send your CV and cover letter with your job application.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>Tips for creating your perfect CV</h3>
+      <ul>
+        <li>Only include relevant, value-adding info</li>
+        <li>Avoid odd hobbies or irrelevant details</li>
+        <li>Keep key info on the first page</li>
+        <li>Use bullet points for clarity</li>
+        <li>Prefer a chronological layout</li>
+      </ul>
+    </div>
+  </section>
+  
+  <script>
+	document.addEventListener('DOMContentLoaded', function() {
+	  const toggle = document.getElementById('menuToggle');
+	  const menu = document.getElementById('navLinks');
+  
+	  toggle.addEventListener('click', function () {
+		menu.classList.toggle('active');
+	  });
+  
+	  document.querySelectorAll('#navLinks a').forEach(link => {
+		link.addEventListener('click', () => {
+		  if (window.innerWidth <= 768) {
+			menu.classList.remove('active');
+		  }
+		});
+	  });
+	});
+  </script>
+   <!-- <script src="./apps.js/index.js"></script> -->
+</body>
+</html>

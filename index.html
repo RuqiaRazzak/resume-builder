@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/images.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css/index.css">
+    <title>Resume_Builder</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+          <a href="index.html" class="logo">
+            <img src="./images/RB.svg" alt="Logo">
+          </a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</button>
+          <div class="nav-links" id="navLinks">
+            <ul>
+              <li><a href="#pageHeader">Home</a></li>
+              <li><a href="Form.html">Create Resume</a></li>
+              <li><a href="#templates">Resume Templates</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <header id="pageHeader">
+        <div class="container header-content">
+            <p>Create Your Professional Resume With Resume Builder</p>
+            <button class="btn-primary">
+                <a href="./Form.html">Create Your Resume</a>
+            </button>
+        </div>
+    </header>
+    
+    <section id="templates">
+        <h1>Make a resume that stands out</h1>
+        <p>Increase your chances of getting a job by creating your resume with our well-designed resume templates.</p>
+        <div class="template-gallery">
+            <img src="./images/T1.PNG" alt="Template 1">
+            <img src="./images/T2.PNG" alt="Template 2">
+            <img src="./images/T3.PNG" alt="Template 3">
+        </div>
+    </section>
+    
+    <section id="features">
+        <h1>Features</h1>
+        
+        <div class="feature">
+            <img src="./images/R1.png" alt="Feature 1">
+            <div>
+                <h2>Quick and easy resume builder</h2>
+                <p>With our online CV maker, it's simple for anyone to quickly create a professional CV. Enter your details, pick a layout, and download your CV.</p>
+            </div>
+        </div>
+    
+        <div class="feature reverse">
+            <img src="./images/R2.png" alt="Feature 2">
+            <div>
+                <h2>More likely to land a job</h2>
+                <p>A professional CV helps you stand out and increases your chances of landing an interview by up to 65%.</p>
+            </div>
+        </div>
+    
+        <div class="feature">
+            <img src="./images/images__3_-removebg-preview.png" alt="Feature 3">
+            <div>
+                <h2>Organize your applications</h2>
+                <p>Create and manage multiple CVs tailored to different jobs using your personal account hub.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <h2>Boost your chances of getting that dream job</h2>
+        <p>Create a distinctive and professional CV within 15 minutes using our builder.</p>
+        <button class="btn-primary">
+            <a href="Form.html">Create Your Resume</a>
+        </button>
+    </section>
+    
+    <section id="contact">
+        <h1>Contact Us</h1>
+          <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+
+              <input type="hidden" name="access_key" value="2ff747cb-10aa-41d1-9484-9f5a2ee71b47">
+              <label for="name">Name</label>
+              <input type="text" name="name" placeholder="Full Name" id="name" required>
+              <label for="email">Email</label>
+              <input type="email" name="email" placeholder="Email Address" id="email" required>
+              <label for="feedback">Feedback</label>
+              <textarea id="feedback" rows="5" placeholder="Your Feedback" required></textarea>
+              <button type="submit" class="btn-primary">Submit</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>© 2025 Resume Builder</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const toggle = document.getElementById('menuToggle');
+          const menu = document.getElementById('navLinks');
+      
+          toggle.addEventListener('click', function () {
+            menu.classList.toggle('active');
+          });
+      
+          document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+              if (window.innerWidth <= 768) {
+                menu.classList.remove('active');
+              }
+            });
+          });
+        });
+      </script>
+        
+<!--     
+ <script src="./apps.js/index.js"></script> -->
+</body>
+</html>

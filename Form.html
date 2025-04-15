@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css/form.css">
+    <link rel="shortcut icon" href="./images/images.jpeg" type="image/x-icon">
+    <title>Personal Details</title>
+</head>
+<body>
+    <nav class="custom-navbar" id="nav">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/RB.svg" alt="Logo" height="50">
+            </a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="form-step active" id="step1">
+          <h2>Personal Details</h2>
+          <label>First Name</label>
+          <input type="text" id="firstName" required>
+          <label>Last Name</label>
+          <input type="text" id="lastName" required>
+          <label>Email</label>
+          <input type="email" id="email">
+          <label>Phone</label>
+          <input type="text" id="phone">
+          <label>Address</label>
+          <input type="text" id="address">
+          <label>LinkedIn</label>
+          <input type="text" id="linkedin">
+          <label>Website</label>
+          <input type="text" id="website">
+          <label>Upload Profile Picture</label>
+          <input type="file" id="profilePic" accept="image/*" onchange="previewPicture(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+          
+            <div class="form-group">
+              <label for="dob">Birth Date</label>
+              <input type="date" id="dob">
+            </div>
+          </div>
+          <div class="buttons">
+            <button onclick="nextStep()">Next Step</button>
+          </div>
+        </div>
+    
+        <div class="form-step" id="step2">
+          <h2>My Experiences</h2>
+          <label>Profile</label>
+          <textarea id="profile"></textarea>
+          <div id="educationSection">
+            <label>Education</label>
+            <div class="education-entry">
+              <input type="text" class="eduDegree" placeholder="Degree" />
+              <input type="text" class="eduInstitution" placeholder="Institution" />
+              <input type="text" class="eduYear" placeholder="Year" />
+            </div>
+          </div>
+          <button type="button" onclick="addEducation()">+ Add Education</button>
+          
+          <div id="workSection">
+            <label>Work Experience</label>
+            <div class="work-entry">
+              <input type="text" class="workPosition" placeholder="Job Title" />
+              <input type="text" class="workCompany" placeholder="Company" />
+              <input type="text" class="workYear" placeholder="Year" />
+              <textarea class="workDesc" placeholder="Description"></textarea>
+            </div>
+          </div>
+          <button type="button" onclick="addWork()">+ Add Experience</button>
+          
+          <div id="skillsSection">
+            <label>Skills</label>
+            <div class="skill-entry">
+              <input type="text" name="skills[]" class="skillInput" placeholder="e.g., JavaScript" />
+            </div>
+          </div>
+          <button type="button" onclick="addSkill()">+ Add Skill</button>
+          
+          <label>Achievements</label>
+          <textarea id="achievements"></textarea>
+          <div class="buttons">
+            <button onclick="prevStep()">Previous</button>
+            <button onclick="nextStep()">Next Step</button>
+          </div>
+        </div>
+    
+        <div class="form-step" id="step3">
+          <h2>Select Template</h2>
+          <div class="template">
+            <img src="./images/Screenshot 2025-04-14 204740.png" onclick="selectTemplate(this, 'Stanford')">
+            <img src="./images/Screenshot 2025-04-14 204603.png" onclick="selectTemplate(this, 'Harvard')">
+            <img src="./images/T3.PNG" onclick="selectTemplate(this, 'Edinburgh')">
+          </div>
+          <div class="buttons">
+            <button onclick="prevStep()">Previous</button>
+            <button onclick="nextStep()">Generate Resume</button>
+          </div>
+       
+      </div>
+    
+        <div class="form-step" id="step4"> 
+          <h2>Your Resume</h2> 
+           <div class="resume-preview" id="resumePreview"></div>
+          <div class="buttons">
+            <button onclick="prevStep()">Back</button>
+            <button onclick="download()">Download Resume</button>
+            <button onclick="printResume()">Print Resume</button>
+          </div>
+        </div>
+      </div>
+     
+
+    <script src="./apps.js/form.js"></script>
+</body>
+</html>
