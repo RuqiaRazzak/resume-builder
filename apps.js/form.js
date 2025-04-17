@@ -373,7 +373,123 @@ function generateResume() {
       font-size: 14px;
       margin: 5px 0 0;
     }
+@media (max-width: 480px) {
+    /* Previous 480px styles */
+    .resume {
+        margin: 10px;
+        flex-direction:row-reverse;
+    }
 
+    .sidebar, .main {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .main h1 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .main h3 {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .section h2 {
+        font-size: 18px;
+        padding-bottom: 3px;
+    }
+
+    /* Enhanced mobile-first adjustments */
+    .sidebar img {
+        width: 50px;
+        height: 90px;
+        border-width: 3px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar h2 {
+        font-size: 17px;
+        margin: 15px 0 8px;
+    }
+
+    .sidebar p, .sidebar li {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .section {
+        margin-bottom: 25px;
+    }
+
+    .item {
+        margin-bottom: 12px;
+    }
+
+    .item h4 {
+        font-size: 15px;
+    }
+
+    .item span {
+        font-size: 12px;
+    }
+
+    .item p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* Extra small devices (phones, 360px and down) */
+    @media (max-width: 360px) {
+        .resume {
+            margin: 5px;
+        }
+
+        .sidebar, .main {
+            padding: 15px 10px;
+        }
+
+        .main h1 {
+            font-size: 20px;
+        }
+
+        .main h3 {
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .section h2 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .item h4 {
+            font-size: 14px;
+        }
+
+        .item span {
+            font-size: 11px;
+        }
+
+        .item p {
+            font-size: 12px;
+        }
+
+        .sidebar h2 {
+            font-size: 16px;
+        }
+
+        .sidebar p, .sidebar li {
+            font-size: 12px;
+        }
+    }
+}
   </style>
 
 <div class="resume">
