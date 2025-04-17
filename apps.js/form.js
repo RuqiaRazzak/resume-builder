@@ -268,39 +268,7 @@ function generateResume() {
       }
     }
 
-    @media (max-width: 480px) {
-      .resume {
-        margin: 10px;
-      }
-
-      .sidebar, .main {
-        padding: 25px 15px;
-      }
-
-      .main h1 {
-        font-size: 22px;
-      }
-
-      .main h3 {
-        font-size: 14px;
-      }
-
-      .section h2 {
-        font-size: 18px;
-      }
-
-      .item h4 {
-        font-size: 14px;
-      }
-
-      .item span {
-        font-size: 12px;
-      }
-
-      .item p {
-        font-size: 13px;
-      }
-    }
+   
 
     /* Original styles remain unchanged below */
     .sidebar img {
@@ -402,7 +370,7 @@ function generateResume() {
 
     /* Enhanced mobile-first adjustments */
     .sidebar img {
-        width: 50px;
+        width: 90px;
         height: 90px;
         border-width: 3px;
         margin-bottom: 15px;
