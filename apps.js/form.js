@@ -594,61 +594,121 @@ function generateResume() {
       display: flex;
       flex-direction: row; /* Explicit row direction */
     }
-    
-    /* Responsive changes start here */
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: row;
-        margin: 10px auto;
-      }
-      
-      .sidebar, .main-content {
-        width: 100%;
-        box-sizing: border-box;
-      }
-      
-      .sidebar {
-        text-align: center;
-        padding: 15px;
-      }
-      
-      .sidebar img {
-        width: 100px;
-        height: 100px;
-      }
-      
-      .main-content {
-        padding: 20px;
-      }
-      
-      h1 {
-        font-size: 24px;
-      }
-      
-      .section h3 {
-        font-size: 16px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .container {
-        box-shadow: none;
-      }
-      
-      .education p, .experience p {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      
-      .section p {
-        font-size: 14px;
-      }
-      
-      ul {
-        padding-left: 15px;
-      }
-    }
+          
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .container {
+   flex-direction: row;
+    max-width: 95%;
+    margin: 20px auto;
+  }
+  
+  .sidebar {
+    width: 35%;
+    padding: 15px;
+  }
+  
+  .main-content {
+    width: 65%;
+    padding: 20px;
+  }
+}
 
+@media (max-width: 768px) {
+  .container {
+    flex-direction:row;
+    margin: 15px auto;
+  }
+  
+  .sidebar, .main-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .sidebar img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .main-content {
+    padding: 15px;
+  }
+  
+  .section {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+   flex-direction: row;
+    margin: 10px auto;
+    box-shadow: none;
+  }
+  
+  .sidebar {
+    padding: 15px 10px;
+  }
+  
+  .main-content {
+    padding: 10px;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .main-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .section h3 {
+    font-size: 1.1rem;
+  }
+  
+  ul {
+    padding-left: 15px;
+  }
+  
+  .section p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+/* Mobile Landscape Optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+  .container {
+   flex-direction: row;
+    max-width: 100%;
+    margin: 10px;
+  }
+  
+  .sidebar img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Text Overflow Prevention */
+.section p, .experience p, .education p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Touch Target Sizes */
+@media (max-width: 768px) {
+  button, input, textarea {
+    min-height: 44px;
+    font-size: 16px;
+  }
+}
+   
+ 
+   
+    
   </style>
   <div class="container">   
 
