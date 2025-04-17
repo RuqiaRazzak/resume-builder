@@ -86,7 +86,12 @@ function addWork() {
 function removeWork(button) {
   button.parentElement.remove();
 }
-
+const textWrapStyles = `
+  white-space: pre-line;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+`;
 function generateResume() {
   // Collect form data
   const fullName = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
@@ -475,7 +480,7 @@ function generateResume() {
       <p>English, Spanish</p>
 
       <h2>Achievements</h2>
-      ${achievements ? `<h2>Achievements</h2><p>${achievements}</p>` : ''}
+      ${achievements ? `<p>${achievements}</p>` : ''}
     </div>
 
     <div class="main">
@@ -484,7 +489,7 @@ function generateResume() {
 
       <div class="section">
         <h2>Profile</h2>
-        <p>${profile}</p>
+        <p style="${textWrapStyles}">${profile}</p>
       </div>
 
       ${workExperience.length ? `
@@ -494,7 +499,7 @@ function generateResume() {
             <div class="item">
               <h4>${work.position}</h4>
               <span>${work.company} | ${work.year}</span>
-              <p>${work.description}</p>
+              <p style="${textWrapStyles}">${work.description}</p>
             </div>
           `).join('')}
         </div>` : ''}
@@ -677,7 +682,7 @@ function generateResume() {
       <h1 > Curriculum Vitae</h1>
       <div class="section">
         <h3>PROFILE</h3>
-        <p>${profile}</p>
+        <p style="${textWrapStyles}">${profile}</p>
       </div>
           ${education.length ? `
       <div class="section">
@@ -696,7 +701,7 @@ function generateResume() {
               <div class="item">
                 <h4>${work.position}</h4>
                 <span>${work.company} | ${work.year}</span>
-                <p>${work.description}</p>
+                <p style="${textWrapStyles}">${work.description}</p>
               </div>
             `).join('')}
           </div>` : ''}
@@ -980,7 +985,7 @@ flex-wrap: wrap;/* Added for mobile responsiveness */
   <div class="right-column">
     <div class="section">
       <h2>Objective</h2>
-      <p>${profile}</p>
+      <p style="${textWrapStyles}">${profile}</p>
     </div>
     ${workExperience.length ? `
     <div class="section experience">
@@ -988,7 +993,7 @@ flex-wrap: wrap;/* Added for mobile responsiveness */
           ${workExperience.map(work => `
          <h4>${work.position}</h4>
                 <span>${work.company} | ${work.year}</span>
-                <p>${work.description}</p>
+                <p style="${textWrapStyles}">${work.description}</p>
                   `).join('')}
     </div>` : ''}
        ${education.length ? `
